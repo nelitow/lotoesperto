@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121306349-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121306349-3');
+    </script>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Loto Esperto - Resultado das loterias online</title>
@@ -12,18 +38,62 @@
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
   </head>
-  <body>
-  <div class="container">
+  <body class="">
+  <nav class="navbar navbar-expand-lg navbar-light bg-mint fixed-top ">
+    <a class="navbar-brand" href="#">
+      <img src="images/lotoesperto.com.png" style="max-width: 200px;" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#corNavbar02" aria-controls="corNavbar02" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#quina">Quina</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#lotofacil">Lotofacil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#timemania">Timemania</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#lotomania">Lotomania</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#dupla-sena">Dupla Sena</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container my-5 py-5">
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col-12 text-center py-3">
         <h2>
           Pra sorte todo mundo é igual.<br> O próximo ganhador pode ser você.
         </h2>
       </div>
       <div class="col-md-4 col-sm-6" id="quina">
-        <div class="card" style="">
+        <div class="card shadow" style="">
           <div class="card-body">
             <h5 class="card-title">Quina <span class="numero"></span></h5>
+            <p class="card-text">
+              <span class="acumulado">Acumulado: R$ </span><br>
+              <span class="dezenas"></span>
+              <span class="ganhadores"></span>
+            </p>
+            <span class="dia">Dia: </span><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6" id="mega-sena">
+        <div class="card shadow" style="">
+          <div class="card-body">
+            <h5 class="card-title">Mega-sena <span class="numero"></span></h5>
             <p class="card-text">
               <span class="acumulado">Acumulado: R$ </span><br>
               <span class="dezenas"></span>
@@ -43,8 +113,27 @@
               <span class="ganhadores"></span>
             </p>
             <span class="dia">Dia: </span><br>
+            <a href="https://app.monetizze.com.br/r/ALE3294658" class="btn btn-success d-block">Guia de apostas para Lotofácil!</a>
           </div>
         </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6" id="timemania">
+        <div class="card" style="">
+          <div class="card-body">
+            <h5 class="card-title">Timemania <span class="numero"></span></h5>
+            <p class="card-text">
+              <span class="acumulado">Acumulado: R$ </span><br>
+              <span class="dezenas"></span>
+              <span class="ganhadores"></span>
+              <span class="time">Time: </span>
+            </p>
+            <span class="dia">Dia: </span><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center py-5">
+        <div data-mvc-banner="medium-rectangle"></div><script type="text/javascript"> (function(storeName) { var b = document.createElement('script'); b.type = 'text/javascript'; b.async = true; b.src = 'https://www.magazinevoce.com.br/js/banner.js?store='+ storeName; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(b, s); })('techcity'); </script>
       </div>
       <div class="col-md-4 col-sm-6" id="lotomania">
         <div class="card" style="">
@@ -67,20 +156,6 @@
               <span class="acumulado">Acumulado: R$  </span><br>
               <span class="dezenas"></span>
               <span class="ganhadores"></span>
-            </p>
-            <span class="dia">Dia: </span><br>
-          </div>
-        </div>
-      </div>
-  		    <div class="col-md-4 col-sm-6" id="timemania">
-        <div class="card" style="">
-          <div class="card-body">
-            <h5 class="card-title">Timemania <span class="numero"></span></h5>
-            <p class="card-text">
-              <span class="acumulado">Acumulado: R$ </span><br>
-              <span class="dezenas"></span>
-              <span class="ganhadores"></span>
-  						<span class="time">Time: </span>
             </p>
             <span class="dia">Dia: </span><br>
           </div>

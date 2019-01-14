@@ -5,6 +5,13 @@
   font-family: Roboto;
 }
 
+.bg-mint{
+  background-color: #AAEFDF;
+}
+.bg-cyan{
+  background-color: #CFFCFF;
+}
+
 .sorteio {
   color: #fff;
   border-radius: 50%;
@@ -20,6 +27,11 @@
 #quina {
   .sorteio {
     background-color: #239;
+  }
+}
+#mega-sena {
+  .sorteio {
+    background-color: #209869;
   }
 }
 

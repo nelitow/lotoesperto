@@ -9,9 +9,24 @@ jQuery.getJSON(url, {})
     }
     for (var m in data.ganhadores) {
       var i = 5 - m;
-      $("#quina .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganhadores. (R$ " + data.rateio[m] + ")<br>");
+      $("#quina .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganharam R$ " + data.rateio[m] + "<br>");
     }
   });
+  //mega-sena
+  var url = "https://www.lotodicas.com.br/api/mega-sena";
+  jQuery.getJSON(url, {})
+    .done(function(data) {
+      $('#mega-sena .dia').append(convertDate(data.data));
+      $('#mega-sena .numero').append(data.numero);
+      $('#mega-sena .acumulado').append(data.valor_acumulado);
+      for (var n in data.sorteio) {
+        $("#mega-sena .card-text").append("<span class='sorteio'>" + data.sorteio[n] + "</span>");
+      }
+      for (var m in data.ganhadores) {
+        var i = 5 - m;
+        $("#mega-sena .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganharam R$ " + data.rateio[m] + "<br>");
+      }
+    });
 //lotofacil
 var url = "https://www.lotodicas.com.br/api/lotofacil";
 jQuery.getJSON(url, {})
@@ -25,7 +40,7 @@ jQuery.getJSON(url, {})
     }
     for (var m in data.ganhadores) {
       var i = 15 - m;
-      $("#lotofacil .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganhadores. (R$ " + data.rateio[m] + ")<br>");
+      $("#lotofacil .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganharam R$ " + data.rateio[m] + "<br>");
     }
   });
 //lotomania
@@ -42,7 +57,7 @@ jQuery.getJSON(url, {})
     for (var m in data.ganhadores) {
       var i = 20 - m;
       if (m != 6)
-        $("#lotomania .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganhadores. (R$ " + data.rateio[m] + ")<br>");
+        $("#lotomania .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganharam R$ " + data.rateio[m] + "<br>");
       else
         $("#lotomania .ganhadores").append("Nenhum número: " + data.ganhadores[m] + " acertadores<br>");
     }
@@ -66,12 +81,12 @@ jQuery.getJSON(url, {})
 		$("#dupla-sena .ganhadores").append("Ganhadores sorteio 1:<br>");
     for (var m in data.ganhadores[0]) {
       var i = 6 - m;
-      $("#dupla-sena .ganhadores").append(i + " números: " + data.ganhadores[0][m] + " ganhadores. (R$ " + data.rateio[0][m] + ")<br>");
+      $("#dupla-sena .ganhadores").append(i + " números: " + data.ganhadores[0][m] + " ganharam R$ " + data.rateio[0][m] + "<br>");
     }
 		$("#dupla-sena .ganhadores").append("Ganhadores sorteio 2:<br>");
     for (var m in data.ganhadores[1]) {
       var i = 6 - m;
-      $("#dupla-sena .ganhadores").append(i + " números: " + data.ganhadores[1][m] + " ganhadores. (R$ " + data.rateio[1][m] + ")<br>");
+      $("#dupla-sena .ganhadores").append(i + " números: " + data.ganhadores[1][m] + " ganharam R$ " + data.rateio[1][m] + "<br>");
     }
   });
 
@@ -89,9 +104,9 @@ jQuery.getJSON(url, {})
     for (var m in datat.ganhadores) {
       var i = 7 - m;
 			if (m != 5)
-      	$("#timemania .ganhadores").append(i + " números: " + datat.ganhadores[m] + " ganhadores. (R$ " + datat.rateio[m] + ")<br>");
+      	$("#timemania .ganhadores").append(i + " números: " + datat.ganhadores[m] + " ganharam R$ " + datat.rateio[m] + "<br>");
 			else
-				$("#timemania .ganhadores").append(" Time do Coração: " + datat.ganhadores[m] + " ganhadores. (R$ " + datat.rateio[m] + ")<br>");
+				$("#timemania .ganhadores").append(" Time do Coração: " + datat.ganhadores[m] + " ganharam R$ " + datat.rateio[m] + "<br>");
     }
   });
 
