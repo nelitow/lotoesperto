@@ -18,7 +18,8 @@
   margin: 5px;
   font-weight: bold;
   text-align: center;
-  display: inline-block; }
+  display: inline-block;
+  line-height: 2.5rem; }
 
 #quina .sorteio {
   background-color: #239; }
@@ -40,7 +41,7 @@
   color: #000; }
 
 .app-header__logo .logo-src, .app-sidebar.sidebar-text-light .app-header__logo .logo-src {
-  background-image: url("/images/lotoesperto.png");
+  background-image: none;
   background-size: contain;
   height: 80%;
   width: 80%;
