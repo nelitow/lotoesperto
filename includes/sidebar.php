@@ -68,7 +68,7 @@
           </a>
         </li>
         <li class="">
-          <a href="/dupla-sena" class="nav-link">
+          <a href="/duplasena" class="nav-link">
             <i class="metismenu-icon fa fa-dot-circle"> </i>
             Dupla-Sena
           </a>
@@ -77,6 +77,12 @@
           <a href="/blog" target="_blank" class="nav-link">
             <i class="metismenu-icon fa fa-blog"> </i>
             Blog
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://instagram.com/lotoesperto" target="_blank" class="nav-link">
+            <img src="/images/instagram-brands.svg" class="metismenu-icon" style="text-align: center;    width: 34px;    height: 34px;    line-height: 34px;    position: absolute;    left: 5px;    top: 50%;    margin-top: -17px;    font-size: 1.5rem;    opacity: .3;    transition: color 300ms;">
+            Instagram
           </a>
         </li>
       </ul>

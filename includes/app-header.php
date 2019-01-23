@@ -58,7 +58,7 @@
                     </a>
         </li>
         <li class="nav-item">
-          <a href="/dupla-sena" class="nav-link">
+          <a href="/duplasena" class="nav-link">
                         <i class="nav-link-icon fa fa-dot-circle"> </i>
                         Dupla-Sena
                     </a>
