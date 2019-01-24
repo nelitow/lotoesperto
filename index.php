@@ -68,7 +68,9 @@
                         <span class="ganhadores"></span>
                       </p>
                       <span class="dia">Dia: </span><br>
-                      <a target="_blank" class="btn btn-primary text-center d-block bg-happy-green border-0" href="https://go.hotmart.com/L11280144G">Melhore suas apostas na Lotofácil</a>
+                      <a target="_blank" class="btn btn-primary text-center d-block bg-happy-green border-0" href="/loto-expert">
+                        Melhore suas apostas na Lotofácil
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -38,7 +38,7 @@
                 </div>
               </div>
               <div class="col-12">
-                <a target="_blank" class="btn btn-primary text-center bg-happy-green border-0" href="https://go.hotmart.com/L11280144G">Melhore suas apostas na Lotofácil</a>
+                <a target="_blank" class="btn btn-primary text-center bg-happy-green border-0" href="/loto-expert">Melhore suas apostas na Lotofácil</a>
               </div>
             </div>
           </div>
