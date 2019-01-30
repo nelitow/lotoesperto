@@ -10,12 +10,11 @@
               <div class="page-title-wrapper">
                 <div class="page-title-heading">
                   <div class="page-title-icon">
-                    <i class="fa fa-dice icon-gradient bg-mean-fruit">
-                                        </i>
+                    <i class="fa fa-dice icon-gradient bg-mean-fruit"></i>
                   </div>
                   <div>
                     <div class="">
-                      "Diligência é a mãe da boa sorte." <small> - Benjamin Franklin</small>
+                      "O sol não brilha para uma só família." <small> - Anchee Min</small>
                     </div>
                   </div>
                 </div>
@@ -40,6 +39,24 @@
                       <span class="dia">Dia do sorteio: </span><br>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-6 pointer ">
+                <div class="mx-auto" id="prev">
+                  <i class="fa fa-angle-left icon-gradient h1 bg-happy-green m-0"></i>
+                  <p>
+                    Anterior
+                  </p>
+                </div>
+              </div>
+              <div class="col-6 pointer" id="next">
+                <div class="mx-auto">
+                  <i class="fa fa-angle-right icon-gradient h1 bg-happy-green m-0"></i>
+                  <p>
+                    Proximo
+                  </p>
                 </div>
               </div>
             </div>
