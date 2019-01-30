@@ -22,9 +22,6 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-12 pb-2 text-center">
-                <a href="https://go.hotmart.com/L11280144G" target="_blank"><img src="images/banner-aposte-melhor.gif" width="100%" style="max-width: 600px;"/></a>
-              </div>
             </div>
             <div class="row">
               <div class="col-sm-12 col-md-6">
@@ -74,6 +71,18 @@
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div class="card-deck col-4 mb-4 mx-auto">
+                <a class="d-block mx-auto" href="https://www.amazon.com.br/Livro-negro-Loteria-Matheus-B/dp/8561365420/ref=as_li_ss_il?ie=UTF8&qid=1548820274&sr=8-2&keywords=loterias&linkCode=li3&tag=nltw-20&linkId=22f526a324a230724786807396a5842e&language=pt_BR" target="_blank">
+                  <div class="card shadow">
+                    <img class="card-img-top" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=8561365420&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=nltw-20&language=pt_BR" alt="O Livro Negro da Loteria">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">O Livro Negro da Loteria</h5>
+                        <img src="https://ir-br.amazon-adsystem.com/e/ir?t=nltw-20&language=pt_BR&l=li3&o=33&a=8561365420" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </div>
+                  </div>
+                </a>
               </div>
               <div class="col-sm-12 col-md-6">
                 <div class="card mb-3 widget-content bg-happy-itmeo">

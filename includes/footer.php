@@ -5,7 +5,7 @@
         <ul class="nav">
           <li class="nav-item">
             <a href="https://go.hotmart.com/L11280144G" target="_blank" class="nav-link">
-              Desdobramentos
+              FECHAMENTOS OTIMIZADOS
             </a>
           </li>
           <li class="nav-item">
