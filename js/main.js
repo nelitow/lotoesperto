@@ -32,7 +32,7 @@ jQuery.getJSON(url, {})
         megasena(data.numero);
     });
   }
-  function megasena(n = "") {
+  function megasena(n) {
     jQuery.getJSON(urlmega + "/" + n, {})
       .done(function(data) {
         mega_curr = data.numero;
