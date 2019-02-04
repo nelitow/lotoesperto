@@ -14,8 +14,18 @@ jQuery.getJSON(url, {})
     }
   });
   //mega-sena
+  $.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results==null){
+       return null;
+    }
+    else{
+       return decodeURI(results[1]) || 0;
+    }
+  }
   var urlmega = "https://www.lotodicas.com.br/api/mega-sena";
-  var cmega = new URL(window.location.href).searchParams.get("sorteio");
+  var cmega = $.urlParam("sorteio");
+  console.log(21);
   var mega_curr = 0;
   var mega_late = 0;
   jQuery.getJSON(urlmega, {})
@@ -46,26 +56,6 @@ jQuery.getJSON(url, {})
           $("#mega-sena .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganharam R$ " + data.rateio[m].toLocaleString('pt-BR') + "<br>");
         }
       });
-  }
-  $("#prev").click(function(){
-    megaPrev();
-  });
-  function megaPrev() {
-    window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (mega_curr-1));
-  }
-  $("#next").click(function(){
-    if(window.mega_late == mega_curr) {
-      Swal.fire({
-        type: 'error',
-        title: 'Ops...',
-        text: 'Ainda nao saiu o próximo resultado!'
-      });
-      return;
-    }
-    megaNext();
-  });
-  function megaNext() {
-    window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (mega_curr+1));
   }
 //lotofacil
 var url = "https://www.lotodicas.com.br/api/lotofacil";
