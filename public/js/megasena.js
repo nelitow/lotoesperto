@@ -4,7 +4,7 @@
 $(document).ready(function(){
 //mega-sena
 var urlmega = "https://www.lotodicas.com.br/api/mega-sena";
-var cmega = new URL(window.location.href).searchParams.get("sorteio");
+var cmega = getUrlVars()["sorteio"];
 var mega_curr = 0;
 var mega_late = 0;
 jQuery.getJSON(urlmega, {})

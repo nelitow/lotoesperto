@@ -1,7 +1,8 @@
 $(document).ready(function(){
 //quina
 urlquina = "https://www.lotodicas.com.br/api/quina";
-cquina = new URL(window.location.href).searchParams.get("sorteio");
+cquina = null;
+cquina = getUrlVars()["sorteio"];
 quina_curr = 0;
 quina_late = 0;
 jQuery.getJSON(urlquina, {})
@@ -54,10 +55,5 @@ $("#next").click(function(){
 
 function quinaNext() {
   window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (quina_curr+1));
-}
-
-function convertDate(date) {
-  var date_arr = date.split("-");
-  return date_arr[2] + "/" + date_arr[1] + "/" + date_arr[0];
 }
 });

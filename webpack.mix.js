@@ -13,6 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
    .scripts(['resources/js/jquery.js','resources/js/home.js'], 'public/js/home.js').sourceMaps()
+   .scripts(['resources/js/jquery.js','resources/js/jsfunctions.js'], 'public/js/jsfunctions.js').sourceMaps()
    .scripts(['resources/js/jquery.js','resources/js/megasena.js'], 'public/js/megasena.js')
    .scripts(['resources/js/jquery.js','resources/js/lotofacil.js'], 'public/js/lotofacil.js')
    .scripts(['resources/js/jquery.js','resources/js/quina.js'], 'public/js/quina.js')

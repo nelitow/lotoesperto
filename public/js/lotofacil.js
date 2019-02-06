@@ -4,7 +4,7 @@
 $(document).ready(function(){
 //lotofacil
 urlloto = "https://www.lotodicas.com.br/api/lotofacil";
-cloto = new URL(window.location.href).searchParams.get("sorteio");
+cloto = getUrlVars()["sorteio"];
 loto_curr = 0;
 loto_late = 0;
 jQuery.getJSON(urlloto, {})
@@ -57,10 +57,5 @@ $("#next").click(function(){
 
 function lotoNext() {
   window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (loto_curr+1));
-}
-
-function convertDate(date) {
-  var date_arr = date.split("-");
-  return date_arr[2] + "/" + date_arr[1] + "/" + date_arr[0];
 }
 });

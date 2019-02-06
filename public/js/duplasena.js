@@ -4,7 +4,7 @@
 $(document).ready(function(){
 //duplasena
 urlduplasena = "https://www.lotodicas.com.br/api/dupla-sena";
-cduplasena = new URL(window.location.href).searchParams.get("sorteio");
+cduplasena = getUrlVars()["sorteio"];
 duplasena_curr = 0;
 duplasena_late = 0;
 jQuery.getJSON(urlduplasena, {})
@@ -68,10 +68,5 @@ $("#next").click(function(){
 
 function duplasenaNext() {
   window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (duplasena_curr+1));
-}
-
-function convertDate(date) {
-  var date_arr = date.split("-");
-  return date_arr[2] + "/" + date_arr[1] + "/" + date_arr[0];
 }
 });

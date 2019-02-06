@@ -1,7 +1,7 @@
 $(document).ready(function(){
 //lotomania
 urllotomania = "https://www.lotodicas.com.br/api/lotomania";
-clotomania = new URL(window.location.href).searchParams.get("sorteio");
+clotomania = getUrlVars()["sorteio"];
 lotomania_curr = 0;
 lotomania_late = 0;
 jQuery.getJSON(urllotomania, {})
@@ -57,10 +57,5 @@ $("#next").click(function(){
 
 function lotomaniaNext() {
   window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (lotomania_curr+1));
-}
-
-function convertDate(date) {
-  var date_arr = date.split("-");
-  return date_arr[2] + "/" + date_arr[1] + "/" + date_arr[0];
 }
 });

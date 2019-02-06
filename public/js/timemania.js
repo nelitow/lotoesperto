@@ -4,7 +4,7 @@
 $(document).ready(function(){
 //timemania
 urltimemania = "https://www.lotodicas.com.br/api/timemania";
-ctimemania = new URL(window.location.href).searchParams.get("sorteio");
+ctimemania = getUrlVars()["sorteio"];
 timemania_curr = 0;
 timemania_late = 0;
 jQuery.getJSON(urltimemania, {})
@@ -61,10 +61,5 @@ $("#next").click(function(){
 
 function timemaniaNext() {
   window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (timemania_curr+1));
-}
-
-function convertDate(date) {
-  var date_arr = date.split("-");
-  return date_arr[2] + "/" + date_arr[1] + "/" + date_arr[0];
 }
 });
