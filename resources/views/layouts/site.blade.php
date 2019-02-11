@@ -16,9 +16,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{csrf_token()}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/compiled.css')}}">
     <title>{{config('app.name', 'LaraKiui')}}</title>
     <script type="text/javascript" src="{{asset('js/jsfunctions.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/jq.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/addtohomescreen.js')}}"></script>
+    <script>
+    addToHomescreen();
+    </script>
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png?v=bOMEO7WqBK">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png?v=bOMEO7WqBK">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png?v=bOMEO7WqBK">

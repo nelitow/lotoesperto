@@ -21,3 +21,5 @@ mix.js('resources/js/app.js', 'public/js')
    .scripts(['resources/js/jquery.js','resources/js/lotomania.js'], 'public/js/lotomania.js')
    .scripts(['resources/js/jquery.js','resources/js/duplasena.js'], 'public/js/duplasena.js')
    .sass('resources/sass/app.scss', 'public/css');
+ mix.styles(['resources/css/addtohomescreen.css'], 'public/css/compiled.css');
+ mix.js('resources/js/addtohomescreen.js', 'public/js').sourceMaps();
