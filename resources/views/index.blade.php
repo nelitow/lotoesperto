@@ -1,22 +1,22 @@
 @extends('layouts.site')
 @section('content')
   <div class="app-main__inner">
-    <div class="app-page-title">
-      <div class="page-title-wrapper">
-        <div class="page-title-heading">
-          <div class="page-title-icon">
-            <i class="fa fa-dice icon-gradient bg-mean-fruit">
-                                </i>
-          </div>
-          <div>
-            <div class="">
-              "Diligência é a mãe da boa sorte." <small> - Benjamin Franklin</small>
+    <div class="row my-3">
+      <div class="app-page-title">
+        <div class="page-title-wrapper">
+          <div class="page-title-heading">
+            <div class="page-title-icon">
+              <i class="fa fa-dice icon-gradient bg-mean-fruit">
+              </i>
+            </div>
+            <div>
+              <div class="">
+                "Diligência é a mãe da boa sorte." <small> - Benjamin Franklin</small>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
     </div>
     <div class="row">
       <div class="col-sm-12 col-md-6">

@@ -1,4 +1,4 @@
-<div class="app-sidebar sidebar-shadow bg-happy-green sidebar-text-light">
+{{-- <div class="app-sidebar sidebar-shadow bg-happy-green sidebar-text-light">
   <div class="app-header__logo">
     <div class="logo-src">
       <a href="/">
@@ -88,4 +88,4 @@
       </ul>
     </div>
   </div>
-</div>
+</div> --}}

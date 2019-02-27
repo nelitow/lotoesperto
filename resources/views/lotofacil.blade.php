@@ -1,16 +1,17 @@
 @extends('layouts.site')
 @section('content')
-  <div class="app-main__inner">
-    <div class="app-page-title">
-      <div class="page-title-wrapper">
-        <div class="page-title-heading">
-          <div class="page-title-icon">
-            <i class="fa fa-dice icon-gradient bg-mean-fruit">
-                                </i>
-          </div>
-          <div>
-            <div class="">
-              "A quantidade de boa sorte em seu caminho depende da sua disposição para agir." <small> - Barba Sher</small>
+    <div class="row my-3">
+      <div class="app-page-title">
+        <div class="page-title-wrapper">
+          <div class="page-title-heading">
+            <div class="page-title-icon">
+              <i class="fa fa-dice icon-gradient bg-mean-fruit">
+                                  </i>
+            </div>
+            <div>
+              <div class="">
+                "A quantidade de boa sorte em seu caminho depende da sua disposição para agir." <small> - Barba Sher</small>
+              </div>
             </div>
           </div>
         </div>
@@ -54,6 +55,5 @@
         </div>
       </div>
     </div>
-  </div>
 <script type="text/javascript" src="{{asset('js/lotofacil.js')}}"></script>
 @endsection

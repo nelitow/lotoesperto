@@ -1,6 +1,6 @@
 @extends('layouts.site')
 @section('content')
-  <div class="app-main__inner">
+  <div class="row my-3">
     <div class="app-page-title">
       <div class="page-title-wrapper">
         <div class="page-title-heading">
@@ -15,6 +15,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
     <div class="row">
       <div class="col-12 pb-2 text-center">
@@ -56,6 +57,5 @@
         </div>
       </div>
     </div>
-  </div>
 <script type="text/javascript" src="{{asset('js/quina.js')}}"></script>
 @endsection

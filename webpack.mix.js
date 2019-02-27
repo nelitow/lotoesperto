@@ -23,3 +23,4 @@ mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
  mix.styles(['resources/css/addtohomescreen.css'], 'public/css/compiled.css');
  mix.js('resources/js/addtohomescreen.js', 'public/js').sourceMaps();
+ mix.js('resources/js/bootstrap.js', 'public/js').sourceMaps();
