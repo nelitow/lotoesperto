@@ -21,7 +21,7 @@ function Next() {
 }
 function Prev(current) {
   if(getLastUrlParam() == 0)
-    window.location.href = url + (Number(current) - 1);
+    window.location.href = url + "/" + (Number(current) - 1);
   else {
     sorteio = Number(getLastUrlParam());
     window.location.href = url.replace(sorteio, sorteio - 1);
