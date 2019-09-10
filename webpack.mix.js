@@ -20,7 +20,8 @@ mix.js('resources/js/app.js', 'public/js')
    .scripts(['resources/js/jquery.js','resources/js/timemania.js'], 'public/js/timemania.js')
    .scripts(['resources/js/jquery.js','resources/js/lotomania.js'], 'public/js/lotomania.js')
    .scripts(['resources/js/jquery.js','resources/js/duplasena.js'], 'public/js/duplasena.js')
-   .sass('resources/sass/app.scss', 'public/css');
+   .sass('resources/sass/app.scss', 'public/css')
+   .browserSync('http://localhost:8000');
  mix.styles(['resources/css/addtohomescreen.css'], 'public/css/compiled.css');
  mix.js('resources/js/addtohomescreen.js', 'public/js').sourceMaps();
  mix.js('resources/js/bootstrap.js', 'public/js').sourceMaps();

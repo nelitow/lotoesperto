@@ -1,28 +1,20 @@
 $(document).ready(function(){
 //quina
-urlquina = "https://www.lotodicas.com.br/api/quina";
-cquina = null;
-cquina = getUrlVars()["sorteio"];
-quina_curr = 0;
-quina_late = 0;
-jQuery.getJSON(urlquina, {})
-  .done(function(data) {
-    window.quina_late = data.numero;
-    console.log(quina_late);
-});
-if(cquina)
-  quina(cquina);
-else {
-  jQuery.getJSON(urlquina, {})
+var url = "https://www.lotodicas.com.br/api/quina";
+window.atual = getLastUrlParam(); //Pega o numero da url
+if (window.atual == 0) //Se nao tiver, atual é o ultimo sorteio
+  jQuery.getJSON(url, {})
     .done(function(data) {
-      quina_curr = data.numero;
-      quina(data.numero);
+      window.atual = data.numero;
+      getData(window.atual);
   });
-}
-function quina(n) {
-  jQuery.getJSON(urlquina + "/" + n, {})
+else
+  getData(window.atual);
+
+function getData(n) {
+  jQuery.getJSON(url + "/" + n, {})
     .done(function(data) {
-      quina_curr = data.numero;
+      current = data.numero;
       $('#quina .dia').append(convertDate(data.data));
       $('#quina .numero').append(data.numero);
       $('#quina .acumulado').append(data.valor_acumulado.toLocaleString('pt-BR'));
@@ -35,25 +27,5 @@ function quina(n) {
       }
     });
 }
-$("#prev").click(function(){
-  quinaPrev();
-});
-function quinaPrev() {
-  window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (quina_curr-1));
-}
-$("#next").click(function(){
-  if(window.quina_late == quina_curr) {
-    Swal.fire({
-      type: 'error',
-      title: 'Ops...',
-      text: 'Ainda nao saiu o próximo resultado!'
-    });
-    return;
-  }
-  quinaNext();
-});
 
-function quinaNext() {
-  window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (quina_curr+1));
-}
 });

@@ -3,30 +3,23 @@
 
 $(document).ready(function(){
 //lotomania
-urllotomania = "https://www.lotodicas.com.br/api/lotomania";
-clotomania = getUrlVars()["sorteio"];
-lotomania_curr = 0;
-lotomania_late = 0;
-jQuery.getJSON(urllotomania, {})
-  .done(function(data) {
-    window.lotomania_late = data.numero;
-    console.log(lotomania_late);
-});
-if(clotomania)
-  lotomania(clotomania);
-else {
-  jQuery.getJSON(urllotomania, {})
+var url = "https://www.lotodicas.com.br/api/lotomania";
+window.atual = getLastUrlParam(); //Pega o numero da url
+if (window.atual == 0) //Se nao tiver, atual é o ultimo sorteio
+  jQuery.getJSON(url, {})
     .done(function(data) {
-      lotomania_curr = data.numero;
-      lotomania(data.numero);
+      window.atual = data.numero;
+      getData(window.atual);
   });
-}
-function lotomania(n) {
-  jQuery.getJSON(urllotomania + "/" + n, {})
+else
+  getData(window.atual);
+
+function getData(n) {
+  jQuery.getJSON(url + "/" + n, {})
     .done(function(data) {
-      lotomania_curr = data.numero;
+      current = data.numero;
       $('#lotomania .dia').append(convertDate(data.data));
-      $('#lotomania .numero').append(data.numero);
+      $('#lotomania .numero').text(data.numero);
       $('#lotomania .acumulado').append(data.valor_acumulado.toLocaleString('pt-BR'));
       for (var n in data.sorteio) {
         $("#lotomania .card-text").append("<span class='sorteio'>" + data.sorteio[n] + "</span>");
@@ -39,26 +32,5 @@ function lotomania(n) {
           $("#lotomania .ganhadores").append("Nenhum número: " + data.ganhadores[m] + " acertadores<br>");
       }
     });
-}
-$("#prev").click(function(){
-  lotomaniaPrev();
-});
-function lotomaniaPrev() {
-  window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (lotomania_curr-1));
-}
-$("#next").click(function(){
-  if(window.lotomania_late == lotomania_curr) {
-    Swal.fire({
-      type: 'error',
-      title: 'Ops...',
-      text: 'Ainda nao saiu o próximo resultado!'
-    });
-    return;
-  }
-  lotomaniaNext();
-});
-
-function lotomaniaNext() {
-  window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (lotomania_curr+1));
 }
 });

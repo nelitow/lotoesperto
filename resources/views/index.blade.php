@@ -22,8 +22,8 @@
       <div class="col-sm-12 col-md-6">
         <div class="card mb-3 widget-content bg-grow-early">
           <div class="widget-content-wrapper text-white">
-            <div class="" id="mega-sena">
-              <a class="h2" href="/megasena">Mega-sena - <span class="numero"></span></a>
+            <div class="" id="megasena">
+              <a class="h2" href="/megasena/">Mega-Sena - <span class="numero"></span></a>
               <p class="card-text">
                 <span class="acumulado">Acumulado: R$ </span><br>
                 <span class="dezenas"></span>
@@ -38,7 +38,7 @@
         <div class="card mb-3 widget-content bg-midnight-bloom">
           <div class="widget-content-wrapper text-white">
             <div class="" id="quina">
-              <a class="h2" href="/quina">Quina - <span class="numero"></span></a>
+              <a class="h2" href="/quina/">Quina - <span class="numero"></span></a>
               <p class="card-text">
                 <span class="acumulado">Acumulado: R$ </span><br>
                 <span class="dezenas"></span>
@@ -53,7 +53,7 @@
         <div class="card mb-3 widget-content bg-love-kiss">
           <div class="widget-content-wrapper text-white">
             <div class="" id="lotofacil">
-              <a class="h2" href="/lotofacil">Lotofácil - <span class="numero"></span></a>
+              <a class="h2" href="/lotofacil/">Lotofácil - <span class="numero"></span></a>
               <p class="card-text">
                 <span class="acumulado">Acumulado: R$ </span><br>
                 <span class="dezenas"></span>
@@ -72,7 +72,7 @@
         <div class="card mb-3 widget-content bg-happy-itmeo">
           <div class="widget-content-wrapper text-white">
             <div class="" id="timemania">
-              <a class="h2" href="/timemania">Timemania - <span class="numero"></span></a>
+              <a class="h2" href="/timemania/">Timemania - <span class="numero"></span></a>
               <p class="card-text">
                 <span class="acumulado">Acumulado: R$ </span><br>
                 <span class="dezenas"></span>
@@ -88,7 +88,7 @@
         <div class="card mb-3 widget-content bg-strong-bliss">
           <div class="widget-content-wrapper text-white">
             <div class="" id="lotomania">
-              <a class="h2" href="/lotomania">Lotomania - <span class="numero"></span></a>
+              <a class="h2" href="/lotomania/">Lotomania - <span class="numero"></span></a>
               <p class="card-text">
                 <span class="acumulado">Acumulado: R$ </span><br>
                 <span class="dezenas"></span>
@@ -103,7 +103,7 @@
         <div class="card mb-3 widget-content bg-grow-early">
           <div class="widget-content-wrapper text-white">
             <div class="" id="dupla-sena">
-              <a class="h2" href="/duplasena">Dupla-sena - <span class="numero"></span></a>
+              <a class="h2" href="/duplasena/">Dupla-sena - <span class="numero"></span></a>
               <p class="card-text">
                 <span class="acumulado">Acumulado: R$ </span><br>
                 <span class="dezenas"></span>

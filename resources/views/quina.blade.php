@@ -19,7 +19,7 @@
     </div>
     <div class="row">
       <div class="col-12 pb-2 text-center">
-        <a href="https://go.hotmart.com/L11280144G" target="_blank"><img src="images/banner-aposte-melhor.gif" width="100%" style="max-width: 600px;"/></a>
+        <a href="https://go.hotmart.com/L11280144G" target="_blank"><img src="/images/banner-aposte-melhor.gif" width="100%" style="max-width: 600px;"/></a>
       </div>
     </div>
     <div class="row">
@@ -27,7 +27,7 @@
         <div class="card mb-3 widget-content">
           <div class="widget-content-wrapper">
             <div class="" id="quina">
-              <h1 class="">Quina - <span class="numero"></span></h1>
+              <h1 class="">Quina - <span class="numero">{{$sorteio ?? ""}}</span></h1>
               <p class="card-text h3">
                 <span class="acumulado">Acumulado: R$ </span><br>
                 <span class="dezenas"></span>

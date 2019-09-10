@@ -13,7 +13,7 @@ jQuery.getJSON(url, {})
       $("#quina .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganharam R$ " + data.rateio[m].toLocaleString('pt-BR') + "<br>");
     }
   });
-  //mega-sena
+  //megasena
   $.urlParam = function(name){
     var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
     if (results==null){
@@ -25,13 +25,11 @@ jQuery.getJSON(url, {})
   }
   var urlmega = "https://www.lotodicas.com.br/api/mega-sena";
   var cmega = $.urlParam("sorteio");
-  console.log(21);
   var mega_curr = 0;
   var mega_late = 0;
   jQuery.getJSON(urlmega, {})
     .done(function(data) {
       window.mega_late = data.numero;
-      console.log(mega_late);
   });
   if(cmega)
     megasena(cmega);
@@ -46,14 +44,14 @@ jQuery.getJSON(url, {})
     jQuery.getJSON(urlmega + "/" + n, {})
       .done(function(data) {
         mega_curr = data.numero;
-        $('#mega-sena .dia').append(convertDate(data.data));
-        $('#mega-sena .numero').append(data.numero);
-        $('#mega-sena .acumulado').append(data.valor_acumulado.toLocaleString('pt-BR'));
+        $('#megasena .dia').append(convertDate(data.data));
+        $('#megasena .numero').append(data.numero);
+        $('#megasena .acumulado').append(data.valor_acumulado.toLocaleString('pt-BR'));
         for (var n in data.sorteio)
-          $("#mega-sena .card-text").append("<span class='sorteio'>" + data.sorteio[n] + "</span>");
+          $("#megasena .card-text").append("<span class='sorteio'>" + data.sorteio[n] + "</span>");
         for (var m in data.ganhadores) {
           var i = 5 - m;
-          $("#mega-sena .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganharam R$ " + data.rateio[m].toLocaleString('pt-BR') + "<br>");
+          $("#megasena .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganharam R$ " + data.rateio[m].toLocaleString('pt-BR') + "<br>");
         }
       });
   }
@@ -61,7 +59,6 @@ jQuery.getJSON(url, {})
 var url = "https://www.lotodicas.com.br/api/lotofacil";
 jQuery.getJSON(url, {})
   .done(function(data) {
-    console.log(data);
     $('#lotofacil .dia').append(convertDate(data.data));
     $('#lotofacil .numero').append(data.numero);
     $('#lotofacil .acumulado').append(data.valor_acumulado.toLocaleString('pt-BR'));

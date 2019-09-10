@@ -18,7 +18,7 @@
     </div>
     <div class="row">
       <div class="col-12 pb-2 text-center">
-        <a href="https://go.hotmart.com/L11280144G" target="_blank"><img src="images/banner-aposte-melhor.gif" width="100%" style="max-width: 600px;"/></a>
+        <a href="https://go.hotmart.com/L11280144G" target="_blank"><img src="/images/banner-aposte-melhor.gif" width="100%" style="max-width: 600px;"/></a>
       </div>
     </div>
     <div class="row">

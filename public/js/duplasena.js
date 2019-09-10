@@ -3,26 +3,19 @@
 
 $(document).ready(function(){
 //duplasena
-urlduplasena = "https://www.lotodicas.com.br/api/dupla-sena";
-cduplasena = getUrlVars()["sorteio"];
-duplasena_curr = 0;
-duplasena_late = 0;
-jQuery.getJSON(urlduplasena, {})
-  .done(function(data) {
-    window.duplasena_late = data.numero;
-    console.log(duplasena_late);
-});
-if(cduplasena)
-  duplasena(cduplasena);
-else {
-  jQuery.getJSON(urlduplasena, {})
+url = "https://www.lotodicas.com.br/api/dupla-sena";
+window.atual = getLastUrlParam(); //Pega o numero da url
+if (window.atual == 0) //Se nao tiver, atual é o ultimo sorteio
+  jQuery.getJSON(url, {})
     .done(function(data) {
-      duplasena_curr = data.numero;
-      duplasena(data.numero);
+      window.atual = data.numero;
+      getData(window.atual);
   });
-}
-function duplasena(n) {
-  jQuery.getJSON(urlduplasena + "/" + n, {})
+else
+  getData(window.atual);
+
+function getData(n) {
+  jQuery.getJSON(url + "/" + n, {})
     .done(function(data) {
       duplasena_curr = data.numero;
       $('#dupla-sena .dia').append(convertDate(data.data));
@@ -47,26 +40,5 @@ function duplasena(n) {
         $("#dupla-sena .ganhadores").append(i + " números: " + data.ganhadores[1][m] + " ganharam R$ " + data.rateio[1][m].toLocaleString('pt-BR') + "<br>");
       }
     });
-}
-$("#prev").click(function(){
-  duplasenaPrev();
-});
-function duplasenaPrev() {
-  window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (duplasena_curr-1));
-}
-$("#next").click(function(){
-  if(window.duplasena_late == duplasena_curr) {
-    Swal.fire({
-      type: 'error',
-      title: 'Ops...',
-      text: 'Ainda nao saiu o próximo resultado!'
-    });
-    return;
-  }
-  duplasenaNext();
-});
-
-function duplasenaNext() {
-  window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (duplasena_curr+1));
 }
 });

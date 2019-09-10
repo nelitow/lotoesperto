@@ -22,7 +22,7 @@
         <div class="card mb-3 widget-content">
           <div class="widget-content-wrapper">
             <div class="" id="lotofacil">
-              <h1 class="">Lotofácil - <span class="numero"></span></h1>
+              <h1 class="">Lotofácil - <span class="numero">{{$sorteio ?? ""}}</span></h1>
               <p class="card-text h3">
                 <span class="acumulado">Acumulado: R$ </span><br>
                 <span class="dezenas"></span>

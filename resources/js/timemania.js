@@ -1,27 +1,20 @@
 $(document).ready(function(){
 //timemania
-urltimemania = "https://www.lotodicas.com.br/api/timemania";
-ctimemania = getUrlVars()["sorteio"];
-timemania_curr = 0;
-timemania_late = 0;
-jQuery.getJSON(urltimemania, {})
-  .done(function(data) {
-    window.timemania_late = data.numero;
-    console.log(timemania_late);
-});
-if(ctimemania)
-  timemania(ctimemania);
-else {
-  jQuery.getJSON(urltimemania, {})
+var url = "https://www.lotodicas.com.br/api/timemania";
+window.atual = getLastUrlParam(); //Pega o numero da url
+if (window.atual == 0) //Se nao tiver, atual é o ultimo sorteio
+  jQuery.getJSON(url, {})
     .done(function(data) {
-      timemania_curr = data.numero;
-      timemania(data.numero);
+      window.atual = data.numero;
+      getData(window.atual);
   });
-}
-function timemania(n) {
-  jQuery.getJSON(urltimemania + "/" + n, {})
+else
+  getData(window.atual);
+
+function getData(n) {
+  jQuery.getJSON(url + "/" + n, {})
     .done(function(data) {
-      timemania_curr = data.numero;
+      current = data.numero;
       $('#timemania .dia').append(convertDate(data.data));
       $('#timemania .numero').append(data.numero);
       $('#timemania .acumulado').append(data.valor_acumulado.toLocaleString('pt-BR'));
@@ -38,25 +31,5 @@ function timemania(n) {
       }
     });
 }
-$("#prev").click(function(){
-  timemaniaPrev();
-});
-function timemaniaPrev() {
-  window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (timemania_curr-1));
-}
-$("#next").click(function(){
-  if(window.timemania_late == timemania_curr) {
-    Swal.fire({
-      type: 'error',
-      title: 'Ops...',
-      text: 'Ainda nao saiu o próximo resultado!'
-    });
-    return;
-  }
-  timemaniaNext();
-});
 
-function timemaniaNext() {
-  window.location.href = (window.location.href.split('?')[0] + "?sorteio=" + (timemania_curr+1));
-}
 });

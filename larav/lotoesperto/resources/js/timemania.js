@@ -16,8 +16,8 @@ jQuery.getJSON(url, {})
       $("#quina .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganharam R$ " + data.rateio[m] + "<br>");
     }
   });
-  //mega-sena
-  var urlmega = "https://www.lotodicas.com.br/api/mega-sena";
+  //megasena
+  var urlmega = "https://www.lotodicas.com.br/api/megasena";
   var cmega = new URL(window.location.href).searchParams.get("sorteio");
   var mega_curr = 0;
   var mega_late = 0;
@@ -39,14 +39,14 @@ jQuery.getJSON(url, {})
     jQuery.getJSON(urlmega + "/" + n, {})
       .done(function(data) {
         mega_curr = data.numero;
-        $('#mega-sena .dia').append(convertDate(data.data));
-        $('#mega-sena .numero').append(data.numero);
-        $('#mega-sena .acumulado').append(data.valor_acumulado);
+        $('#megasena .dia').append(convertDate(data.data));
+        $('#megasena .numero').append(data.numero);
+        $('#megasena .acumulado').append(data.valor_acumulado);
         for (var n in data.sorteio)
-          $("#mega-sena .card-text").append("<span class='sorteio'>" + data.sorteio[n] + "</span>");
+          $("#megasena .card-text").append("<span class='sorteio'>" + data.sorteio[n] + "</span>");
         for (var m in data.ganhadores) {
           var i = 5 - m;
-          $("#mega-sena .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganharam R$ " + data.rateio[m] + "<br>");
+          $("#megasena .ganhadores").append(i + " números: " + data.ganhadores[m] + " ganharam R$ " + data.rateio[m] + "<br>");
         }
       });
   }

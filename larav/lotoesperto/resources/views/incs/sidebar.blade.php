@@ -38,37 +38,37 @@
       <ul class="vertical-nav-menu">
         <li class="app-sidebar__heading">Resultados</li>
         <li class="">
-          <a href="/megasena" class="nav-link">
+          <a href="/megasena/" class="nav-link">
             <i class="metismenu-icon fa fa-dot-circle"> </i>
             Mega-Sena
           </a>
         </li>
         <li class="">
-          <a href="/lotofacil" class="nav-link">
+          <a href="/lotofacil/" class="nav-link">
             <i class="metismenu-icon fa fa-dot-circle"> </i>
             Lotofácil
           </a>
         </li>
         <li class="">
-          <a href="/quina" class="nav-link">
+          <a href="/quina/" class="nav-link">
             <i class="metismenu-icon fa fa-dot-circle"> </i>
             Quina
           </a>
         </li>
         <li class="">
-          <a href="/timemania" class="nav-link">
+          <a href="/timemania/" class="nav-link">
             <i class="metismenu-icon fa fa-dot-circle"> </i>
             Timemania
           </a>
         </li>
         <li class="">
-          <a href="/lotomania" class="nav-link">
+          <a href="/lotomania/" class="nav-link">
             <i class="metismenu-icon fa fa-dot-circle"> </i>
             Lotomania
           </a>
         </li>
         <li class="">
-          <a href="/duplasena" class="nav-link">
+          <a href="/duplasena/" class="nav-link">
             <i class="metismenu-icon fa fa-dot-circle"> </i>
             Dupla-Sena
           </a>

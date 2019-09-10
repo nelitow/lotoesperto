@@ -9,32 +9,32 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a href="/megasena" class="nav-link">
+                <a href="/megasena/" class="nav-link">
                     Mega-Sena
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/lotofacil" class="nav-link">
+                <a href="/lotofacil/" class="nav-link">
                     Lotofácil
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/quina" class="nav-link">
+                <a href="/quina/" class="nav-link">
                     Quina
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/timemania" class="nav-link">
+                <a href="/timemania/" class="nav-link">
                     Timemania
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/lotomania" class="nav-link">
+                <a href="/lotomania/" class="nav-link">
                     Lotomania
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/duplasena" class="nav-link">
+                <a href="/duplasena/" class="nav-link">
                     Dupla-Sena
                 </a>
             </li>
