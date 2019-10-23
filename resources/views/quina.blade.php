@@ -42,18 +42,22 @@
     <div class="row text-center">
       <div class="col-6 pointer ">
         <div class="mx-auto" id="prev">
-          <i class="fa fa-angle-left icon-gradient h1 bg-happy-green m-0"></i>
-          <p>
-            Anterior
-          </p>
+            <a href="">
+              <i class="fa fa-angle-left icon-gradient h1 bg-happy-green m-0"></i>
+              <p>
+                Anterior
+              </p>
+            </a>
         </div>
       </div>
       <div class="col-6 pointer" id="next">
         <div class="mx-auto">
-          <i class="fa fa-angle-right icon-gradient h1 bg-happy-green m-0"></i>
-          <p>
-            Proximo
-          </p>
+          <a href="">
+            <i class="fa fa-angle-right icon-gradient h1 bg-happy-green m-0"></i>
+            <p>
+              Proximo
+            </p>
+          </a>
         </div>
       </div>
     </div>

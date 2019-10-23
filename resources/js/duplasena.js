@@ -14,7 +14,8 @@ else
 function getData(n) {
   jQuery.getJSON(url + "/" + n, {})
     .done(function(data) {
-      duplasena_curr = data.numero;
+      $("#prev a").attr("href", "./" + (data.numero - 1));
+      $("#next a").attr("href", "./" + (data.numero + 1));
       $('#dupla-sena .dia').append(convertDate(data.data));
       $('#dupla-sena .numero').append(data.numero);
       $('#dupla-sena .acumulado').append(data.valor_acumulado.toLocaleString('pt-BR'));

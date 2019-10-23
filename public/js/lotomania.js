@@ -17,7 +17,9 @@ else
 function getData(n) {
   jQuery.getJSON(url + "/" + n, {})
     .done(function(data) {
-      current = data.numero;
+      if(!data)Swal.fire({type: 'error',title: 'Ops...',text: 'Resultado ainda não disponível!'});
+      $("#prev a").attr("href", "./" + (data.numero - 1));
+      $("#next a").attr("href", "./" + (data.numero + 1));
       $('#lotomania .dia').append(convertDate(data.data));
       $('#lotomania .numero').text(data.numero);
       $('#lotomania .acumulado').append(data.valor_acumulado.toLocaleString('pt-BR'));

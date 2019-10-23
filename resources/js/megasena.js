@@ -14,9 +14,13 @@ $(document).ready(function(){
   function getData(n) {
     jQuery.getJSON(url + "/" + n, {})
       .done(function(data) {
-        current = data.numero;
+        if(!data)Swal.fire({type: 'error',title: 'Ops...',text: 'Resultado ainda não disponível!'});
+        $("#prev a").attr("href", "./" + (data.numero - 1));
+        $("#next a").attr("href", "./" + (data.numero + 1));
         $('#megasena .dia').append(convertDate(data.data));
         $('#megasena .numero').text(data.numero);
+        $("#prev a").attr("href", "./" + (data.numero - 1));
+        $("#next a").attr("href", "./" + (data.numero + 1));
         $('#megasena .acumulado').append(data.valor_acumulado).toLocaleString('pt-BR');
         for (var n in data.sorteio)
           $("#megasena .card-text").append("<span class='sorteio'>" + data.sorteio[n] + "</span>");
